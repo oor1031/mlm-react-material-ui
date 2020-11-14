@@ -11,6 +11,7 @@ import Home from './MLMComponents/Home'
 import  Program  from './MLMComponents/Program/Program'
 import  ChangeRequests  from './MLMComponents/Program/ChangeRequests'
 import  ProgramHistory  from './MLMComponents/Program/History'
+import { HomeWork } from '@material-ui/icons'
 
 // Use different router type depending on configuration
 const AppRouterComponent =
@@ -19,9 +20,7 @@ const AppRouterComponent =
 const AppRouter = () => (
   <AppRouterComponent>
     <Switch>
-    <RouteWithLayout exact path={`/`} component={Home} layout={DashboardLayout} />
 
-      {/* <Route exact path="/" render={() => <Redirect to="/sales/dashboard" />} /> */}
       <Route path="/auth" component={Auth} />
       <RouteWithLayout
         path={"/program/master-data"}
@@ -41,12 +40,13 @@ const AppRouter = () => (
         layout={DashboardLayout}
       />
       <RouteWithLayout
-        path={"*"}
-        component={Error}
+        path={"/*"}
+        component={Dashboard}
         layout={DashboardLayout}
       />
-      {/* <Route path="/" component={DashboardLayout} /> */}
-      {/* <RoutePrivate path="/" component={LoggedInRouter} /> */}
+
+<RouteWithLayout exact path={"/"} component={Home} layout={DashboardLayout} />
+
     </Switch>
   </AppRouterComponent>
 )

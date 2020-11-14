@@ -26,6 +26,7 @@ const SidebarNav = (props) => {
   const itemsCore = [
     {
       name: "Home",
+      Icon: IconDashboard,
       link: "/"
     },
     {

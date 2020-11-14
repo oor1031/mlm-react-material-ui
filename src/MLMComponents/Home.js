@@ -25,5 +25,5 @@ const HomeContent = (props) => {
 }
 
 export default function Home(props) {
-  return <Home/>;
+  return <HomeContent/>;
 }

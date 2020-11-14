@@ -11,11 +11,10 @@ import Home from './MLMComponents/Home'
 import  Program  from './MLMComponents/Program/Program'
 import  ChangeRequests  from './MLMComponents/Program/ChangeRequests'
 import  ProgramHistory  from './MLMComponents/Program/History'
-import { HomeWork } from '@material-ui/icons'
+// import { HomeWork } from '@material-ui/icons'
 
 // Use different router type depending on configuration
-const AppRouterComponent =
-  config.navigationType === 'history' ? BrowserRouter : HashRouter
+const AppRouterComponent = config.navigationType === 'history' ? BrowserRouter : HashRouter
 
 const AppRouter = () => (
   <AppRouterComponent>
@@ -41,7 +40,7 @@ const AppRouter = () => (
       />
       <RouteWithLayout
         path={"/*"}
-        component={Dashboard}
+        component={Home}
         layout={DashboardLayout}
       />
 

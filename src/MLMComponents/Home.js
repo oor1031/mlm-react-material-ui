@@ -2,9 +2,9 @@ import React from 'react'
 
 import Grid from '@material-ui/core/Grid'
 
-import BasePageContainer from '_common/BasePageContainer'
-import BasePageToolbar from '_common/BasePageToolbar'
-const HomeContent = (props) => {
+import BasePageContainer from '../_common/BasePageContainer'
+import BasePageToolbar from '../_common/BasePageToolbar'
+const Home = () => {
   return (
     <BasePageContainer>
       <BasePageToolbar
@@ -24,6 +24,4 @@ const HomeContent = (props) => {
   )
 }
 
-export default function Home(props) {
-  return <HomeContent/>;
-}
+export default Home
